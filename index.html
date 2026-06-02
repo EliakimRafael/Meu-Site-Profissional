@@ -9,6 +9,13 @@
     content="EightDesign Web - Criação de sites profissionais para pequenos negócios, com domínio, suporte, manutenção e presença digital."
   />
 
+  <meta name="author" content="Eliakim Rafael dos Santos | EightDesign Web" />
+
+  <meta
+    name="copyright"
+    content="© 2026 EightDesign Web. Todos os direitos reservados a Eliakim Rafael dos Santos."
+  />
+
   <title>EightDesign Web | Criação de Sites Profissionais</title>
 
   <link rel="stylesheet" href="style.css" />
@@ -18,7 +25,7 @@
   <header class="header">
     <div class="container nav">
       <a href="#inicio" class="logo">
-        <img src="foto logo/logo1.png" alt="Logo EightDesign Web" class="logo-img" />
+        <img src="foto logo/logo3 (2).png" alt="Logo EightDesign Web" class="logo-img" />
       </a>
 
       <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">☰</button>
@@ -379,24 +386,36 @@
           <div class="form-row">
             <div>
               <label for="name">Nome</label>
-              <input type="text" id="name" placeholder="O seu nome" />
+              <input type="text" id="name" name="name" placeholder="O seu nome" required />
             </div>
 
             <div>
-              <label for="phone">Telemóvel</label>
-              <input type="tel" id="phone" placeholder="+351 900 000 000" />
+              <label for="phone">Telemóvel / WhatsApp</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="+351 900 000 000"
+                aria-describedby="privacyNote"
+                required
+              />
             </div>
           </div>
 
           <div class="form-row">
             <div>
               <label for="business">Tipo de negócio</label>
-              <input type="text" id="business" placeholder="Ex: restaurante, limpeza, barbearia" />
+              <input
+                type="text"
+                id="business"
+                name="business"
+                placeholder="Ex: restaurante, limpeza, barbearia"
+              />
             </div>
 
             <div>
               <label for="service">Serviço desejado</label>
-              <select id="service">
+              <select id="service" name="service" required>
                 <option value="">Escolha uma opção</option>
                 <option value="Landing Page">Landing Page</option>
                 <option value="Site Profissional">Site Profissional</option>
@@ -411,19 +430,37 @@
           <div class="form-row">
             <div>
               <label for="scheduleDate">Data preferida</label>
-              <input type="date" id="scheduleDate" />
+              <input type="date" id="scheduleDate" name="scheduleDate" />
             </div>
 
             <div>
               <label for="scheduleTime">Horário preferido</label>
-              <input type="time" id="scheduleTime" />
+              <input type="time" id="scheduleTime" name="scheduleTime" />
             </div>
           </div>
 
           <div>
             <label for="message">Mensagem</label>
-            <textarea id="message" placeholder="Explique o que precisa para o seu site..."></textarea>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Explique o que precisa para o seu site..."
+            ></textarea>
           </div>
+
+          <div class="consent-box">
+            <input type="checkbox" id="phoneConsent" name="phoneConsent" required />
+
+            <label for="phoneConsent">
+              Ao informar o meu número de telefone, autorizo a <strong>EightDesign Web</strong>
+              a entrar em contacto comigo por chamada, SMS ou WhatsApp para tratar do meu pedido.
+              Os meus dados serão usados apenas para este atendimento.
+            </label>
+          </div>
+
+          <p class="privacy-note" id="privacyNote">
+            O número informado não será vendido, partilhado ou usado para fins não autorizados.
+          </p>
 
           <div id="formMessage" class="form-message"></div>
 
@@ -435,9 +472,16 @@
 
   <footer class="footer">
     <div class="container footer-content">
-      <p>© <span id="year"></span> EightDesign Web. Todos os direitos reservados.</p>
+      <p class="footer-copy">
+        © <span id="year"></span> <span>EightDesign Web</span>. Todos os direitos reservados a
+        <strong>Eliakim Rafael dos Santos</strong>.
+      </p>
 
-      <div>
+      <p class="rights-reserved">
+        Desenvolvido por <span>EightDesign Web</span>.
+      </p>
+
+      <div class="footer-links">
         <a href="#servicos">Serviços</a>
         <a href="#planos">Planos</a>
         <a href="#contacto">Contacto</a>
