@@ -177,7 +177,7 @@
             <div class="icon" aria-hidden="true">💬</div>
             <h3>Contacto rápido</h3>
             <p>
-              Botões de WhatsApp, Instagram, formulário de orçamento e chamadas para ação.
+              Botões de WhatsApp, GitHub, formulário de orçamento e chamadas para ação.
             </p>
           </article>
         </div>
@@ -341,7 +341,7 @@
           <h2>Vamos criar o seu site?</h2>
 
           <p>
-            Fale comigo pelo WhatsApp, acompanhe o meu trabalho no Instagram ou envie
+            Fale comigo pelo WhatsApp, acompanhe os meus projetos no GitHub ou envie
             um pedido de agendamento para o serviço que deseja.
           </p>
 
@@ -357,13 +357,13 @@
             </a>
 
             <a
-              href="https://www.instagram.com/eliakim_dev/"
-              class="social-link instagram"
-              id="contactInstagram"
+              href="https://github.com/EliakimRafael"
+              class="social-link github"
+              id="contactGithub"
               target="_blank"
               rel="noopener noreferrer"
             >
-              📸 Ver Instagram
+              💻 Ver GitHub
             </a>
 
             <a href="mailto:rafaelsantos2244@outlook.com" class="social-link email-link">
@@ -377,8 +377,8 @@
           </div>
 
           <div class="contact-item">
-            <strong>Instagram:</strong>
-            <span>@eliakim_dev</span>
+            <strong>GitHub:</strong>
+            <span>github.com/EliakimRafael</span>
           </div>
 
           <div class="contact-item">
@@ -491,6 +491,8 @@
 
           <p class="privacy-note" id="privacyNote">
             O número informado não será vendido, partilhado ou usado para fins não autorizados.
+            Consulte a
+            <a href="#privacidade" data-legal="privacidade">Política de Privacidade</a>.
           </p>
 
           <div id="formMessage" class="form-message" role="status" aria-live="polite"></div>
@@ -509,16 +511,44 @@
       </p>
 
       <p class="rights-reserved">
-        Desenvolvido por <span>EightDesign Web</span>.
+        Desenvolvido por <span>Eliakim Rafael dos Santos</span>.
       </p>
 
-      <div class="footer-links">
-        <a href="#servicos">Serviços</a>
-        <a href="#planos">Planos</a>
-        <a href="#contacto">Contacto</a>
+      <div class="footer-links" aria-label="Informações legais">
+        <a href="#privacidade" data-legal="privacidade">Privacidade</a>
+        <span>•</span>
+        <a href="#cookies" data-legal="cookies">Cookies</a>
+        <span>•</span>
+        <a href="#termos" data-legal="termos">Termos</a>
       </div>
     </div>
   </footer>
+
+  <div class="legal-modal" id="legalModal" aria-hidden="true">
+    <div class="legal-modal-backdrop" data-close-legal></div>
+
+    <section
+      class="legal-modal-card"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="legalTitle"
+    >
+      <button
+        type="button"
+        class="legal-close"
+        id="legalClose"
+        aria-label="Fechar janela"
+        data-close-legal
+      >
+        ×
+      </button>
+
+      <span class="tag" id="legalTag">Informação legal</span>
+      <h2 id="legalTitle">Informação legal</h2>
+
+      <div class="legal-content" id="legalContent"></div>
+    </section>
+  </div>
 
   <a
     href="https://wa.me/351969247246"

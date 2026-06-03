@@ -1,6 +1,6 @@
 /* =========================================================
    Tema profissional: Laranja + Preto + Branco
-   Arquivo CSS completo para substituir o estilo antigo
+   Arquivo CSS completo
    ========================================================= */
 
 :root {
@@ -55,6 +55,10 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+body.modal-open {
+  overflow: hidden;
 }
 
 body::before {
@@ -717,8 +721,14 @@ textarea {
   box-shadow: 0 14px 35px rgba(249, 115, 22, 0.26);
 }
 
-.social-link.instagram {
-  background: linear-gradient(135deg, #ff8a1d, #c2410c, #111111);
+.social-link.github {
+  background: linear-gradient(135deg, #24292f, #111111, var(--orange-dark));
+}
+
+.social-link.github:hover {
+  box-shadow:
+    0 14px 35px rgba(249, 115, 22, 0.28),
+    0 0 22px rgba(255, 255, 255, 0.08);
 }
 
 .social-link.email-link {
@@ -830,13 +840,15 @@ textarea:focus {
   color: var(--white);
 }
 
-.consent-box a {
+.consent-box a,
+.privacy-note a {
   color: var(--orange-soft);
   font-weight: 900;
   text-shadow: 0 0 10px rgba(249, 115, 22, 0.35);
 }
 
-.consent-box a:hover {
+.consent-box a:hover,
+.privacy-note a:hover {
   color: var(--white);
 }
 
@@ -908,13 +920,19 @@ textarea:focus {
 .footer-links {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
   flex-wrap: wrap;
+}
+
+.footer-links span {
+  color: var(--muted-dark);
+  font-weight: 900;
 }
 
 .footer a {
   color: var(--text);
   transition: 0.25s ease;
+  font-weight: 800;
 }
 
 .footer a:hover {
@@ -946,6 +964,119 @@ textarea:focus {
   box-shadow:
     0 20px 46px rgba(249, 115, 22, 0.38),
     0 0 28px rgba(249, 115, 22, 0.24);
+}
+
+/* =========================================================
+   Modal legal: Privacidade, Cookies e Termos
+   ========================================================= */
+
+.legal-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.legal-modal.open {
+  display: flex;
+}
+
+.legal-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top left, rgba(249, 115, 22, 0.22), transparent 34%),
+    rgba(0, 0, 0, 0.78);
+  backdrop-filter: blur(12px);
+}
+
+.legal-modal-card {
+  position: relative;
+  width: min(100%, 930px);
+  max-height: min(86vh, 850px);
+  overflow-y: auto;
+  padding: 38px;
+  border-radius: 28px;
+  border: 1px solid rgba(249, 115, 22, 0.38);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0.045)),
+    rgba(10, 10, 10, 0.96);
+  box-shadow:
+    0 28px 90px rgba(0, 0, 0, 0.72),
+    0 0 50px rgba(249, 115, 22, 0.12);
+}
+
+.legal-close {
+  position: sticky;
+  top: 0;
+  float: right;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  border: 1px solid rgba(249, 115, 22, 0.36);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--white);
+  font-size: 1.7rem;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.legal-close:hover {
+  background: rgba(249, 115, 22, 0.18);
+  transform: scale(1.04);
+}
+
+.legal-modal-card h2 {
+  margin: 18px 0 18px;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+  color: var(--white);
+}
+
+.legal-content h3 {
+  margin-top: 26px;
+  margin-bottom: 10px;
+  color: var(--orange-soft);
+  font-size: 1.35rem;
+  text-shadow: 0 0 14px rgba(249, 115, 22, 0.22);
+}
+
+.legal-content p {
+  color: var(--text);
+  margin-bottom: 13px;
+}
+
+.legal-content ul {
+  margin: 12px 0 18px 20px;
+  color: var(--text);
+}
+
+.legal-content li {
+  margin-bottom: 8px;
+}
+
+.legal-content strong {
+  color: var(--white);
+}
+
+.legal-content a {
+  color: var(--orange-soft);
+  font-weight: 900;
+}
+
+.legal-note {
+  margin-top: 28px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(249, 115, 22, 0.22);
+  color: var(--muted-dark);
+  font-size: 0.92rem;
 }
 
 .reveal {
@@ -1071,6 +1202,20 @@ textarea:focus {
 
   .consent-box {
     font-size: 0.88rem;
+  }
+
+  .legal-modal {
+    padding: 14px;
+  }
+
+  .legal-modal-card {
+    padding: 28px 20px;
+    border-radius: 22px;
+  }
+
+  .legal-close {
+    width: 40px;
+    height: 40px;
   }
 }
 
