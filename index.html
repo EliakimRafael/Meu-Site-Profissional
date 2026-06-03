@@ -16,6 +16,8 @@
     content="© 2026 EightDesign Web. Todos os direitos reservados a Eliakim Rafael dos Santos."
   />
 
+  <meta name="theme-color" content="#f97316" />
+
   <title>EightDesign Web | Criação de Sites Profissionais</title>
 
   <link rel="stylesheet" href="style.css" />
@@ -24,13 +26,22 @@
 <body>
   <header class="header">
     <div class="container nav">
-      <a href="#inicio" class="logo">
-        <img src="foto logo/logo3 (2).png" alt="Logo EightDesign Web" class="logo-img" />
+      <a href="#inicio" class="logo" aria-label="Ir para o início">
+        <img src="foto logo/logo5.png" alt="Logo EightDesign Web" class="logo-img" />
       </a>
 
-      <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">☰</button>
+      <button
+        class="menu-btn"
+        id="menuBtn"
+        type="button"
+        aria-label="Abrir menu de navegação"
+        aria-controls="navLinks"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
 
-      <nav class="nav-links" id="navLinks">
+      <nav class="nav-links" id="navLinks" aria-label="Menu principal">
         <a href="#inicio">Início</a>
         <a href="#servicos">Serviços</a>
         <a href="#portfolio">Portfólio</a>
@@ -46,10 +57,10 @@
     <section class="hero" id="inicio">
       <div class="container hero-content">
         <div class="hero-text reveal">
-          <span class="tag">Sites profissionais para pequenos negócios.</span>
+          <span class="tag">Sites profissionais para pequenos negócios</span>
 
           <h1>
-            Transforme o seu negócio em uma presença digital profissional.
+            Transforme o seu negócio numa presença digital profissional.
           </h1>
 
           <p>
@@ -63,7 +74,7 @@
             <a href="#planos" class="btn btn-outline">Ver planos</a>
           </div>
 
-          <div class="stats">
+          <div class="stats" aria-label="Destaques do serviço">
             <div>
               <strong>24h</strong>
               <span>Suporte</span>
@@ -82,7 +93,7 @@
         </div>
 
         <div class="hero-card reveal">
-          <div class="site-preview">
+          <div class="site-preview" aria-hidden="true">
             <div class="preview-top">
               <span></span>
               <span></span>
@@ -122,7 +133,7 @@
 
         <div class="cards-grid">
           <article class="card reveal">
-            <div class="icon">💻</div>
+            <div class="icon" aria-hidden="true">💻</div>
             <h3>Criação de sites</h3>
             <p>
               Sites institucionais, landing pages e páginas profissionais para apresentar
@@ -131,7 +142,7 @@
           </article>
 
           <article class="card reveal">
-            <div class="icon">🌐</div>
+            <div class="icon" aria-hidden="true">🌐</div>
             <h3>Domínio e publicação</h3>
             <p>
               Ajuda na compra do domínio, configuração da hospedagem e publicação do site online.
@@ -139,7 +150,7 @@
           </article>
 
           <article class="card reveal">
-            <div class="icon">🛠️</div>
+            <div class="icon" aria-hidden="true">🛠️</div>
             <h3>Manutenção</h3>
             <p>
               Atualizações, pequenas alterações, melhorias de conteúdo e acompanhamento técnico.
@@ -147,7 +158,7 @@
           </article>
 
           <article class="card reveal">
-            <div class="icon">📱</div>
+            <div class="icon" aria-hidden="true">📱</div>
             <h3>Design responsivo</h3>
             <p>
               O site adapta-se a telemóvel, tablet e computador, mantendo uma boa experiência.
@@ -155,7 +166,7 @@
           </article>
 
           <article class="card reveal">
-            <div class="icon">🔎</div>
+            <div class="icon" aria-hidden="true">🔎</div>
             <h3>SEO básico</h3>
             <p>
               Estrutura preparada para motores de busca como Google, com títulos e descrição.
@@ -163,7 +174,7 @@
           </article>
 
           <article class="card reveal">
-            <div class="icon">💬</div>
+            <div class="icon" aria-hidden="true">💬</div>
             <h3>Contacto rápido</h3>
             <p>
               Botões de WhatsApp, Instagram, formulário de orçamento e chamadas para ação.
@@ -178,8 +189,7 @@
         <div class="section-title center reveal">
           <h2>Modelos de sites que posso criar</h2>
           <p>
-            Estes exemplos podem ser usados como portfólio demonstrativo até você conseguir
-            os primeiros clientes reais.
+            Exemplos de projetos que podem ser adaptados para diferentes áreas e objetivos.
           </p>
         </div>
 
@@ -193,7 +203,7 @@
           </article>
 
           <article class="portfolio-card reveal">
-            <div class="portfolio-img">Limpeza</div>
+            <div class="portfolio-img">Serviços</div>
             <h3>Site para serviços</h3>
             <p>
               Serviços, áreas atendidas, formulário de orçamento e apresentação profissional.
@@ -216,8 +226,8 @@
         <div class="section-title center reveal">
           <h2>Planos para começar</h2>
           <p>
-            Estes valores são exemplos. Pode ajustar conforme o cliente, dificuldade,
-            prazo e quantidade de páginas.
+            Valores de referência. O orçamento final pode variar conforme o número de páginas,
+            funcionalidades, prazo e nível de personalização.
           </p>
         </div>
 
@@ -281,34 +291,34 @@
         </div>
 
         <div class="process-grid">
-          <div class="process-card reveal">
+          <article class="process-card reveal">
             <span>01</span>
             <h3>Briefing</h3>
             <p>Entendo o negócio, objetivo, serviços, público e estilo visual.</p>
-          </div>
+          </article>
 
-          <div class="process-card reveal">
+          <article class="process-card reveal">
             <span>02</span>
             <h3>Design</h3>
             <p>Crio a estrutura visual com foco em confiança, clareza e conversão.</p>
-          </div>
+          </article>
 
-          <div class="process-card reveal">
+          <article class="process-card reveal">
             <span>03</span>
             <h3>Desenvolvimento</h3>
             <p>Transformo o projeto em código usando HTML, CSS e JavaScript.</p>
-          </div>
+          </article>
 
-          <div class="process-card reveal">
+          <article class="process-card reveal">
             <span>04</span>
             <h3>Entrega</h3>
             <p>Publico o site e explico como funciona a manutenção.</p>
-          </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" aria-label="Chamada para orçamento">
       <div class="container">
         <div class="cta reveal">
           <div>
@@ -336,15 +346,27 @@
           </p>
 
           <div class="social-links">
-            <a href="#" class="social-link" id="contactWhatsapp" target="_blank">
+            <a
+              href="https://wa.me/351969247246"
+              class="social-link"
+              id="contactWhatsapp"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               💬 Falar no WhatsApp
             </a>
 
-            <a href="#" class="social-link instagram" id="contactInstagram" target="_blank">
+            <a
+              href="https://www.instagram.com/eliakim_dev/"
+              class="social-link instagram"
+              id="contactInstagram"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               📸 Ver Instagram
             </a>
 
-            <a href="mailto:rafaelsantos2244@outlool.com" class="social-link email-link">
+            <a href="mailto:rafaelsantos2244@outlook.com" class="social-link email-link">
               ✉️ Enviar Email
             </a>
           </div>
@@ -386,7 +408,14 @@
           <div class="form-row">
             <div>
               <label for="name">Nome</label>
-              <input type="text" id="name" name="name" placeholder="O seu nome" required />
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="O seu nome"
+                autocomplete="name"
+                required
+              />
             </div>
 
             <div>
@@ -396,6 +425,7 @@
                 id="phone"
                 name="phone"
                 placeholder="+351 900 000 000"
+                autocomplete="tel"
                 aria-describedby="privacyNote"
                 required
               />
@@ -410,6 +440,7 @@
                 id="business"
                 name="business"
                 placeholder="Ex: restaurante, limpeza, barbearia"
+                autocomplete="organization"
               />
             </div>
 
@@ -462,7 +493,7 @@
             O número informado não será vendido, partilhado ou usado para fins não autorizados.
           </p>
 
-          <div id="formMessage" class="form-message"></div>
+          <div id="formMessage" class="form-message" role="status" aria-live="polite"></div>
 
           <button type="submit" class="btn">Enviar agendamento pelo WhatsApp</button>
         </form>
@@ -489,9 +520,22 @@
     </div>
   </footer>
 
-  <a href="#" class="whatsapp-btn" id="whatsappBtn" target="_blank" aria-label="Falar no WhatsApp">
+  <a
+    href="https://wa.me/351969247246"
+    class="whatsapp-btn"
+    id="whatsappBtn"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Falar no WhatsApp"
+  >
     💬
   </a>
+
+  <noscript>
+    <p style="padding: 16px; text-align: center; background: #111111; color: #ffffff;">
+      Para melhor funcionamento do menu e do formulário, ative o JavaScript no navegador.
+    </p>
+  </noscript>
 
   <script src="script.js"></script>
 </body>
