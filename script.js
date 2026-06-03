@@ -12,7 +12,7 @@ const CONFIG = {
   instagramUrl: "https://www.instagram.com/eliakim_dev?igsh=ZmoyeHl2cTRseGQx",
 
   // Email colocado exatamente como você enviou
-  email: "rafaelsantos2244@outlool.com"
+  email: "rafaelsantos2244@outlook.com"
 };
 
 
